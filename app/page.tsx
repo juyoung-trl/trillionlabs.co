@@ -30,14 +30,14 @@ export default function Page() {
       {/* Header */}
       <header className={`fixed w-full z-50 transition-all duration-300 ${scrollY > 20 ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 mt-1">
             <Link href="/" className="flex items-center">
               <Image
-                src={`${basePath}/logos/Signiture_Black.png`}
+                src="/logos/Signiture_Black.png"
                 alt="Trillion Labs"
-                width={120}
+                width={100}
                 height={28}
-                className="h-8 w-auto"
+                className="h-5 w-auto"
                 priority
               />
             </Link>
@@ -131,7 +131,7 @@ export default function Page() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-purple-50 rounded-3xl transform rotate-6 scale-95" />
                 <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden p-6">
                   <Image
-                    src={`${basePath}/frontier.jpeg`}
+                    src="/frontier.jpeg"
                     alt="AI Frontier"
                     width={600}
                     height={400}
@@ -247,11 +247,11 @@ export default function Page() {
           <div className="grid md:grid-cols-4 gap-12">
             <div>
               <Image
-                src={`${basePath}/logos/Signiture_Black.png`}
+                src="/logos/Signiture_Black.png"
                 alt="Trillion Labs"
-                width={140}
-                height={32}
-                className="h-8 w-auto mb-6"
+                width={100}
+                height={24}
+                className="h-6 w-auto mb-6"
                 priority
               />
               <p className="text-sm text-gray-500 max-w-xs">
