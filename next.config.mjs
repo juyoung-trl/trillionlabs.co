@@ -10,7 +10,6 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: '/trillionlabs.co',
 }
 
 export default nextConfig
