@@ -40,13 +40,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Generate lockfile
-        run: pnpm install --lockfile-only
-
-      - name: Clean
-        run: pnpm clean
+        run: pnpm install
 
       - name: Build
         run: pnpm build
