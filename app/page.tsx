@@ -33,7 +33,7 @@ export default function Page() {
           <div className="flex items-center space-x-4 mt-1">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logos/Signiture_Black.png"
+                src="logos/Signiture_Black.png"
                 alt="Trillion Labs"
                 width={100}
                 height={28}
@@ -131,7 +131,7 @@ export default function Page() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-purple-50 rounded-3xl transform rotate-6 scale-95" />
                 <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden p-6">
                   <Image
-                    src="/frontier.jpeg"
+                    src="frontier.jpeg"
                     alt="AI Frontier"
                     width={600}
                     height={400}
@@ -247,7 +247,7 @@ export default function Page() {
           <div className="grid md:grid-cols-4 gap-12">
             <div>
               <Image
-                src="/logos/Signiture_Black.png"
+                src="logos/Signiture_Black.png"
                 alt="Trillion Labs"
                 width={100}
                 height={24}
