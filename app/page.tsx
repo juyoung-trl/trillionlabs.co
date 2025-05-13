@@ -4,10 +4,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
+import { usePathname } from 'next/navigation'
 
 export default function Page() {
   const [scrollY, setScrollY] = useState(0)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -30,11 +33,12 @@ export default function Page() {
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logos/Signiture_Black.png"
+                src={`${basePath}/logos/Signiture_Black.png`}
                 alt="Trillion Labs"
                 width={120}
                 height={28}
                 className="h-8 w-auto"
+                priority
               />
             </Link>
           </div>
@@ -127,11 +131,12 @@ export default function Page() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-purple-50 rounded-3xl transform rotate-6 scale-95" />
                 <div className="relative bg-white rounded-3xl shadow-xl overflow-hidden p-6">
                   <Image
-                    src="/frontier.jpeg"
+                    src={`${basePath}/frontier.jpeg`}
                     alt="AI Frontier"
                     width={600}
                     height={400}
                     className="w-full h-auto rounded-xl object-cover"
+                    priority
                   />
                   <div className="mt-4 space-y-3">
                     <div className="space-y-4">
@@ -242,11 +247,12 @@ export default function Page() {
           <div className="grid md:grid-cols-4 gap-12">
             <div>
               <Image
-                src="/logos/Signiture_Black.png"
+                src={`${basePath}/logos/Signiture_Black.png`}
                 alt="Trillion Labs"
                 width={140}
                 height={32}
                 className="h-8 w-auto mb-6"
+                priority
               />
               <p className="text-sm text-gray-500 max-w-xs">
                 Trillion Labs is pioneering the future of AI in Korea with advanced language models and innovative applications.
