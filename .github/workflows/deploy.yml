@@ -42,16 +42,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
-        run: pnpm build
+      - name: Build static site
+        run: pnpm export
         env:
           NODE_ENV: production
           NEXT_PUBLIC_BASE_PATH: /trillionlabs.co
 
-      - name: Create out directory and .nojekyll file
-        run: |
-          mkdir -p out
-          touch out/.nojekyll
+      - name: Create .nojekyll file
+        run: touch out/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
